@@ -1,7 +1,7 @@
 import pickle
 from flask import Flask,request
 
-api=Flask(__name__)
+api=Flask(_name_)
 
 with open('ai.pkl','rb') as f:
     ai=pickle.load(f)
@@ -22,8 +22,7 @@ def predict():
     response=ai.predict(data)[0]
     return response
 
-if __name__=="__main__":
+if _name=="main_":
         api.run(
             host='0.0.0.0',
             port=2000
-        )
